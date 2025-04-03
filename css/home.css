@@ -1,0 +1,108 @@
+.featured {
+    text-align: center;
+}
+.featured img {
+    width: 15%;
+    max-width: 120px;
+    margin: 10px 20px;
+}
+.featured h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 50px;
+}
+.category-card {
+    text-align: center;
+    width: 200%;
+    max-width: 350px;
+    margin-right: 30px;
+
+}
+.category-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    height: 230px;
+
+}
+.category-card a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+.category-card:hover a {
+    transform: scale(1.05);
+}
+
+.destinations {
+    text-align: center;
+    padding: 50px;
+}
+.destinations h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.destinations p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: auto;
+}
+.destination {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s ease;
+}
+.destination img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.destination:hover {
+    transform: scale(1.05);
+}
+.destination p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.destinations-a {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 2px solid #000000;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;  
+}
+.destinations-a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
