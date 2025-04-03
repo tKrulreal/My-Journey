@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family:'Times New Roman', Times, serif
 }
 .hero {
     position: relative;
@@ -44,6 +44,8 @@ p.page {
     font-size: 120%;
     vertical-align: center;
     margin-bottom: -5px;
+    margin-right: 15px;
+
 }
 img.icon{
     width : 90px;
