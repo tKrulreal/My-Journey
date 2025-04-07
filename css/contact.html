@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon (1).ico">
+    <title>The World Travel Guy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold " href="index.html" style="font-size: 1.5rem; color: #f8f9fa;">
+                <img class="icon" src="image/icon.png" alt="Travel Blog">
+                My Journey</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><p class="page">HOME</p></a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html"><p class="page">BLOG</p></a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinations.html"><p class="page">DESTINATIONS</p></a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery"><p class="page">GALLERY</p></a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html"><p class="page">ABOUT</p></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html"><p class="page">CONTACT</p></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <div class="lienhe">
+            <div class="content">
+                <h1>CONTACT</h1>
+            <p>Send me your questions, comments, or suggestions!</p>
+            </div>
+            <img src="image/giay1.png" style="position: absolute;bottom: -30px; z-index: 2; width: 100%; height: auto; ">
+        </div>
+    <div class="overlay"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div id="contactform">
+        <h2>GET IN TOUCH</h2>
+        <h3>Contact Form</h3>
+        <p>Send me your questions, comments, or suggestions!</p>
+        <p>If you'd like to work with me or you have a question or comment, you can contact me using the form below. 
+           You can also find <a href="about.html" class="highlight">more info about me here</a>.</p>
+        <p>Sometimes I'm busy traveling, but I try to respond to any messages!</p>
+    </div>
+    <div class="form">
+        <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <label for="name">Your name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your email</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your message</label>
+                <textarea id="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send</button>
+        </form>
+        </div>
+        <script> 
+            document.getElementById("contactForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                alert("Your message has been sent successfully!");
+            });
+        </script>
+        <div class="faq-section">
+            <div class="faq-header">FREQUENTLY ASKED QUESTIONS</div>
+            <div class="faq-items">
+                <div class="faq-item">
+                    <div class="faq-icon">✈</div>
+                    <div class="faq-title">Do you accept guest blogs?</div>
+                    <div class="faq-text">No, I do not accept guest blog posts on my site. I do all of the writing myself.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-icon">✈</div>
+                    <div class="faq-title">Can I quote you as an expert source?</div>
+                    <div class="faq-text">Sure, I'm happy to provide a quote as an expert source on topics like travel and culture.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-icon">✈</div>
+                    <div class="faq-title">Can I buy drone footage from you?</div>
+                    <div class="faq-text">Sure, just send me a note letting me know what footage you’re interested in!</div>
+                </div>
+            </div>
+         </div>
+</body>
+<section class="instagram-gallery">
+    <h2>INSTAGRAM</h2>
+    <div class="gallery">
+        <img src="image/ban-dao-son-tra.png" alt="Instagram Image 1">
+        <img src="image/sapa.png" alt="Instagram Image 2">
+        <img src="image/phongnha.png" alt="Instagram Image 3">
+        <img src="image/kinhthanhhue.png" alt="Instagram Image 4">
+        <img src="image/hoi-an.png" alt="Instagram Image 5">
+        <img src="image/trang-an.png" alt="Instagram Image 6">
+    </div>
+</section>
+
+
+<section class="newsletter">
+    <h2>Newsletter</h2>
+    <p>Subscribe to my newsletter for the latest blog posts, tips, & travel guides. Let's stay updated!</p>
+    <form>
+        <input type="email" placeholder="Email..." required>
+        <button type="submit">SUBSCRIBE</button>
+    </form>
+</section>
+
+<footer>
+    <div class="footer-links">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fas fa-rss"></i></a>
+        </div>
+        <p>© My Journey</p>
+        <p>
+            <a href="#">Affiliate Disclosures</a> • 
+            <a href="#">Privacy Policy</a> • 
+            <a href="#">Terms Of Use</a>
+        </p>
+    </div>
+    <p class="disclaimer">
+        Some of the pages on my travel blog contain affiliate links. Whenever you buy something through one of these links, I get a small commission at <i>no extra cost to you.</i> As an affiliate, I only recommend products and services that I feel are high quality and helpful to my readers. Thanks for your support.
+    </p>
+</footer>
+
+</html>
