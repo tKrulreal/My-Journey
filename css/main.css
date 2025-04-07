@@ -1,6 +1,7 @@
 body {
     font-family:'Times New Roman', Times, serif
 }
+
 .hero {
     position: relative;
     height: 80vh;
@@ -49,6 +50,11 @@ p.page {
     margin-bottom: -5px;
     margin-right: 30px;
 }
+
+
+
+
+
 img.icon{
     width : 90px;
     height : 80px;
@@ -56,11 +62,10 @@ img.icon{
     margin-top: -20px;
 }
 
-
-
 .instagram-gallery {
     text-align: center;
     margin: 40px 0;
+    width: 100%;
 }
 
 .instagram-gallery h2 {
@@ -76,11 +81,24 @@ img.icon{
 }
 
 .gallery img {
-    width: 16%;
+    width: 100%;
+    max-width: calc(100% / 2 - 10px); /* Default to 2 images per row for small devices */
     height: auto;
     border-radius: 5px;
 }
 
+@media (min-width: 768px) {
+    .gallery img {
+        max-width: calc(100% / 3 - 10px); /* 3 images per row for medium devices */
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery img {
+        max-width: calc(100% / 6 - 10px); /* 6 images per row for large devices */
+    }
+}
+    
 
 .newsletter {
     text-align: center;
