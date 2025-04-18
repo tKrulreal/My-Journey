@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon (1).ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/destination.css">
+    <title>Destination</title>
+    <script src="javascript/main.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="position: sticky; top: 0; z-index: 1030; transition: all 0.3s ease;">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html" style="font-size: 1.8rem; color: #f8f9fa; font-family: 'Georgia', serif; letter-spacing: 1px;">
+                <img class="icon" src="image/icon2.png" alt="Travel Blog" style="margin-right: 8px; transition: all 0.3s ease;">
+                My Journey
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html"><p class="page">HOME</p></a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html"><p class="page">BLOG</p></a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinations.html"><p class="page">DESTINATIONS</p></a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html"><p class="page">GALLERY</p></a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html"><p class="page">ABOUT</p></a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html"><p class="page">CONTACT</p></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="des">
+        <div class="content">
+            <h1>DESTINATIONS</h1>
+            <p>Pick a place to start exploring</p>
+        </div>
+        <img src="image/giay1.png" style="position: absolute; bottom: -30px; left: 0; z-index: 2; width: 100%; height: auto;">
+    </div>
+    <header>
+        <h1>DESTINATIONS</h1>
+        <nav>
+            <a href="#nha-trang">Nha Trang</a>
+            <a href="#da-nang">Đà Nẵng</a>
+            <a href="#hai-phong">Hải Phòng</a>
+            <a href="#ha-noi">Hà Nội</a>
+            <a href="#hue">Huế</a>
+            <a href="#da-lat">Đà Lạt</a>
+            <a href="#phu-quoc">Phú Quốc</a>
+            <a href="#ho-chi-minh">Hồ Chí Minh</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for a destination...">
+            <div id="searchResults" class="search-results"></div>
+        </div>
+    </header>
+    <article class="deck">
+        <!-- Slide 1: Nha Trang -->
+        <section class="slide" id="nha-trang">
+            <h2>NHA TRANG</h2>
+            <div class="filter-options">
+                <label><input type="checkbox" name="type" value="Relaxation"> Du lịch nghỉ dưỡng</label>
+                <label><input type="checkbox" name="type" value="Adventure"> Du lịch mạo hiểm</label>
+                <label><input type="checkbox" name="type" value="Ecotourism"> Du lịch sinh thái</label>
+                <label><input type="checkbox" name="type" value="Culinary"> Du lịch ẩm thực</label>
+                <label><input type="checkbox" name="type" value="NatureExploration"> Du lịch khám phá tự nhiên</label>
+                <label><input type="checkbox" name="type" value="Spiritual"> Du lịch tâm linh</label>
+                <label><input type="checkbox" name="type" value="Entertainment"> Du lịch giải trí</label>
+            </div>
+            <div class="search-suggestions" id="search-suggestions-nha-trang"></div>
+            <div class="filter-results" id="filter-results-nha-trang"></div>
+            <div class="destination-container">
+                <div class="destination-slide" data-types="NatureExploration,Adventure,Ecotourism">
+                    <h3>Hang Heo</h3>
+                    <a href="blog-hang-heo.html" class="destination-link">
+                        <img src="img-distination/1.hang-heo-nha-trang-1_1679118670.jpg" alt="Hang Heo" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Relaxation,Adventure,NatureExploration">
+                    <h3>Biển Nha Trang</h3>
+                    <a href="blog-bien-nha-trang.html" class="destination-link">
+                        <img src="img-distination/2.nha-1-1179x800.jpg" alt="Biển Nha Trang" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Ecotourism,Spiritual,NatureExploration">
+                    <h3>Nhà Thờ Đá</h3>
+                    <a href="blog-nha-tho-da.html" class="destination-link">
+                        <img src="img-distination/3.nha-tho-da-nha-trang-1.jpg" alt="Nhà Thờ Đá" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Ecotourism,NatureExploration,Entertainment">
+                    <h3>Con Đường Hoa Giấy</h3>
+                    <a href="blog-con-duong-hoa-giay.html" class="destination-link">
+                        <img src="img-distination/20.conduonghoagiay.jpg" alt="Con Đường Hoa Giấy" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Ecotourism,Relaxation,Entertainment">
+                    <h3>Vinpearl Nha Trang</h3>
+                    <a href="blog-vinpearl-nha-trang.html" class="destination-link">
+                        <img src="img-distination/17.vinpearl-nha-trang.jpg" alt="Vinpearl Nha Trang" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Ecotourism,NatureExploration">
+                    <h3>Viện Hải Dương Học</h3>
+                    <a href="blog-vien-hai-duong-hoc.html" class="destination-link">
+                        <img src="img-distination/18.vien-hai-duong-hoc-1-e1505371345312.jpg" alt="Viện Hải Dương Học" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Ecotourism,NatureExploration,Relaxation">
+                    <h3>Đảo Hòn Mun</h3>
+                    <a href="blog-dao-hon-mun.html" class="destination-link">
+                        <img src="img-distination/19.dao-hon-mun-1.jpg" alt="Đảo Hòn Mun" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Ecotourism,NatureExploration,Relaxation">
+                    <h3>Đảo Hòn Tằm</h3>
+                    <a href="blog-dao-hon-tam.html" class="destination-link">
+                        <img src="img-distination/21.hon-tam.jpg" alt="Đảo Hòn Tằm" class="destination-image">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Slide 2: Đà Nẵng -->
+        <section class="slide" id="da-nang">
+            <h2>ĐÀ NẴNG</h2>
+            <div class="filter-options">
+                <label><input type="checkbox" name="type" value="Relaxation"> Du lịch nghỉ dưỡng</label>
+                <label><input type="checkbox" name="type" value="Adventure"> Du lịch mạo hiểm</label>
+                <label><input type="checkbox" name="type" value="Ecotourism"> Du lịch sinh thái</label>
+                <label><input type="checkbox" name="type" value="Culinary"> Du lịch ẩm thực</label>
+                <label><input type="checkbox" name="type" value="NatureExploration"> Du lịch khám phá tự nhiên</label>
+                <label><input type="checkbox" name="type" value="Spiritual"> Du lịch tâm linh</label>
+                <label><input type="checkbox" name="type" value="Entertainment"> Du lịch giải trí</label>
+            </div>
+            <div class="search-suggestions" id="search-suggestions-da-nang"></div>
+            <div class="filter-results" id="filter-results-da-nang"></div>
+            <div class="destination-container">
+                <div class="destination-slide" data-types="Relaxation,Ecotourism,Entertainment">
+                    <h3>Bà Nà Hills</h3>
+                    <a href="blog-ba-na-hills.html" class="destination-link">
+                        <img src="img-distination/4.ba-na-hills-1.jpg" alt="Bà Nà Hills" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Ecotourism,Relaxation,Entertainment">
+                    <h3>Cầu Vàng</h3>
+                    <a href="blog-cau-vang.html" class="destination-link">
+                        <img src="img-distination/5.cau-vang-da-nang.jpg" alt="Cầu Vàng" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Culinary,Entertainment,Ecotourism">
+                    <h3>Phố Cổ Hội An</h3>
+                    <a href="blog-pho-co-hoi-an.html" class="destination-link">
+                        <img src="img-distination/6.pho-co-hoi-an-1-1.png" alt="Phố Cổ Hội An" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Relaxation,Ecotourism,NatureExploration">
+                    <h3>Bãi Biển Mỹ Khê</h3>
+                    <a href="blog-bai-bien-my-khe.html" class="destination-link">
+                        <img src="img-distination/22.bien-my-khe.jpg" alt="Bãi Biển Mỹ Khê" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Culinary,Entertainment,Ecotourism">
+                    <h3>Cầu Tình Yêu</h3>
+                    <a href="blog-cau-tinh-yeu.html" class="destination-link">
+                        <img src="img-distination/23.cau-tinh-yeu-da-nang-e-1024x679.jpg" alt="Cầu Tình Yêu" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Culinary,Entertainment,Ecotourism">
+                    <h3>Cầu Rồng</h3>
+                    <a href="blog-cau-rong.html" class="destination-link">
+                        <img src="img-distination/24.tour-du-thuyen-xem-cau-rong-phun-lua.webp" alt="Cầu Rồng" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="NatureExploration,Entertainment,Ecotourism">
+                    <h3>Đèo Hải Vân</h3>
+                    <a href="blog-deo-hai-van.html" class="destination-link">
+                        <img src="img-distination/25.deo_hai_van_da_nang_hue.jpg" alt="Đèo Hải Vân" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="NatureExploration,Relaxation,Entertainment">
+                    <h3>Suối Mơ</h3>
+                    <a href="blog-suoi-mo.html" class="destination-link">
+                        <img src="img-distination/26.suoi-mo-2.jpg" alt="Suối Mơ" class="destination-image">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Slide 3: Hải Phòng -->
+        <section class="slide" id="hai-phong">
+            <h2>HẢI PHÒNG</h2>
+            <div class="filter-options">
+                <label><input type="checkbox" name="type" value="Relaxation"> Du lịch nghỉ dưỡng</label>
+                <label><input type="checkbox" name="type" value="Adventure"> Du lịch mạo hiểm</label>
+                <label><input type="checkbox" name="type" value="Ecotourism"> Du lịch sinh thái</label>
+                <label><input type="checkbox" name="type" value="Culinary"> Du lịch ẩm thực</label>
+                <label><input type="checkbox" name="type" value="NatureExploration"> Du lịch khám phá tự nhiên</label>
+                <label><input type="checkbox" name="type" value="Spiritual"> Du lịch tâm linh</label>
+                <label><input type="checkbox" name="type" value="Entertainment"> Du lịch giải trí</label>
+            </div>
+            <div class="search-suggestions" id="search-suggestions-hai-phong"></div>
+            <div class="filter-results" id="filter-results-hai-phong"></div>
+            <div class="destination-container">
+                <div class="destination-slide" data-types="Relaxation,Culinary,NatureExploration">
+                    <h3>Biển Đồ Sơn</h3>
+                    <a href="blog-bien-do-son.html" class="destination-link">
+                        <img src="img-distination/7.bai-bien-do-son-hai-phong-1-1.webp" alt="Biển Đồ Sơn" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Relaxation,Entertainment,NatureExploration">
+                    <h3>Đảo Cát Bà</h3>
+                    <a href="blog-dao-cat-ba.html" class="destination-link">
+                        <img src="img-distination/8.catba.jpg" alt="Đảo Cát Bà" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Ecotourism,Spiritual,Relaxation">
+                    <h3>Bảo Tàng Hải Phòng</h3>
+                    <a href="blog-bao-tang-hai-phong.html" class="destination-link">
+                        <img src="img-gallery/8.hp.jpg" alt="Bảo Tàng Hải Phòng" class="destination-image">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Slide 4: Hà Nội -->
+        <section class="slide" id="ha-noi">
+            <h2>HÀ NỘI</h2>
+            <div class="filter-options">
+                <label><input type="checkbox" name="type" value="Relaxation"> Du lịch nghỉ dưỡng</label>
+                <label><input type="checkbox" name="type" value="Adventure"> Du lịch mạo hiểm</label>
+                <label><input type="checkbox" name="type" value="Ecotourism"> Du lịch sinh thái</label>
+                <label><input type="checkbox" name="type" value="Culinary"> Du lịch ẩm thực</label>
+                <label><input type="checkbox" name="type" value="NatureExploration"> Du lịch khám phá tự nhiên</label>
+                <label><input type="checkbox" name="type" value="Spiritual"> Du lịch tâm linh</label>
+                <label><input type="checkbox" name="type" value="Entertainment"> Du lịch giải trí</label>
+            </div>
+            <div class="search-suggestions" id="search-suggestions-ha-noi"></div>
+            <div class="filter-results" id="filter-results-ha-noi"></div>
+            <div class="destination-container">
+                <div class="destination-slide" data-types="Ecotourism,Spiritual,Entertainment">
+                    <h3>Hồ Gươm</h3>
+                    <a href="province/hoguom.html" class="destination-link">
+                        <img src="img-gallery/3.hn.jpg" alt="Hồ Gươm" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Spiritual,Entertainment,Ecotourism">
+                    <h3>Lăng Bác</h3>
+                    <a href="blog-lang-bac.html" class="destination-link">
+                        <img src="img-gallery/3.hn_2.jpg" alt="Lăng Bác" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Culinary,Entertainment,Ecotourism">
+                    <h3>Phố Cổ Hà Nội</h3>
+                    <a href="blog-pho-co-ha-noi.html" class="destination-link">
+                        <img src="img-distination/9.pho_co_ha_noi.jpg" alt="Phố Cổ Hà Nội" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Ecotourism,Spiritual">
+                    <h3>Văn Miếu - Quốc Tử Giám</h3>
+                    <a href="blog-van-mieu-quoc-tu-giam.html" class="destination-link">
+                        <img src="img-gallery/3.hn_1.jpg" alt="Văn Miếu - Quốc Tử Giám" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Spiritual,Ecotourism,Entertainment">
+                    <h3>Nhà Thờ Lớn Hà Nội</h3>
+                    <a href="blog-nha-tho-lon-ha-noi.html" class="destination-link">
+                        <img src="img-distination/27.nha-tho-lon-ha-noi-4.jpg" alt="Nhà Thờ Lớn Hà Nội" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="NatureExploration,Ecotourism,Entertainment">
+                    <h3>Chùa Trấn Quốc</h3>
+                    <a href="blog-chua-tran-quoc.html" class="destination-link">
+                        <img src="img-distination/28.chua-tran-quoc-1.jpg" alt="Chùa Trấn Quốc" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Culinary,Ecotourism,Entertainment">
+                    <h3>Hồ Tây</h3>
+                    <a href="blog-ho-tay.html" class="destination-link">
+                        <img src="img-distination/29.ho-tay-co-gi-11.jpg" alt="Hồ Tây" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Ecotourism,Entertainment">
+                    <h3>Nhà Hát Lớn Hà Nội</h3>
+                    <a href="blog-nha-hat-lon-ha-noi.html" class="destination-link">
+                        <img src="img-distination/30.nha-hat-lon-ha-noi-1-1531.jpg" alt="Nhà Hát Lớn Hà Nội" class="destination-image">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Slide 5: Huế -->
+        <section class="slide" id="hue">
+            <h2>HUẾ</h2>
+            <div class="filter-options">
+                <label><input type="checkbox" name="type" value="Relaxation"> Du lịch nghỉ dưỡng</label>
+                <label><input type="checkbox" name="type" value="Adventure"> Du lịch mạo hiểm</label>
+                <label><input type="checkbox" name="type" value="Ecotourism"> Du lịch sinh thái</label>
+                <label><input type="checkbox" name="type" value="Culinary"> Du lịch ẩm thực</label>
+                <label><input type="checkbox" name="type" value="NatureExploration"> Du lịch khám phá tự nhiên</label>
+                <label><input type="checkbox" name="type" value="Spiritual"> Du lịch tâm linh</label>
+                <label><input type="checkbox" name="type" value="Entertainment"> Du lịch giải trí</label>
+            </div>
+            <div class="search-suggestions" id="search-suggestions-hue"></div>
+            <div class="filter-results" id="filter-results-hue"></div>
+            <div class="destination-container">
+                <div class="destination-slide" data-types="Spiritual,NatureExploration,Ecotourism">
+                    <h3>Đại Nội Huế</h3>
+                    <a href="blog-dai-noi-hue.html" class="destination-link">
+                        <img src="img-gallery/4.hue.jpg" alt="Đại Nội Huế" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Spiritual,NatureExploration,Ecotourism">
+                    <h3>Chùa Thiên Mụ</h3>
+                    <a href="blog-chua-thien-mu.html" class="destination-link">
+                        <img src="img-gallery/4.hue_2.jpg" alt="Chùa Thiên Mụ" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="NatureExploration,Ecotourism,Entertainment">
+                    <h3>Sông Hương</h3>
+                    <a href="blog-song-huong.html" class="destination-link">
+                        <img src="img-gallery/4.hue_3.jpg" alt="Sông Hương" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Spiritual,Ecotourism">
+                    <h3>Các Lăng Tẩm Huế</h3>
+                    <a href="blog-cac-lang-tam-hue.html" class="destination-link">
+                        <img src="img-gallery/4.hue_1.jpg" alt="Các Lăng Tẩm Huế" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="NatureExploration,Relaxation,Adventure">
+                    <h3>Đồi Vọng Cảnh</h3>
+                    <a href="blog-doi-vong-canh.html" class="destination-link">
+                        <img src="img-distination/31.nang-chieu-tren-doi-vong-canh.jpg" alt="Đồi Vọng Cảnh" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Culinary,Ecotourism,Entertainment">
+                    <h3>Cầu Tràng Tiền</h3>
+                    <a href="blog-cau-trang-tien.html" class="destination-link">
+                        <img src="img-distination/32.cau-trang-tien-1.jpg" alt="Cầu Tràng Tiền" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="NatureExploration,Relaxation,Ecotourism">
+                    <h3>Biển Lăng Cô</h3>
+                    <a href="blog-bien-lang-co.html" class="destination-link">
+                        <img src="img-distination/33.bienlangco.jpg" alt="Biển Lăng Cô" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Ecotourism,Relaxation,NatureExploration">
+                    <h3>Đầm Lập An</h3>
+                    <a href="blog-dam-lap-an.html" class="destination-link">
+                        <img src="img-distination/34.tour-dam-lap-an-lang-co-hue-1-ngay.jpg" alt="Đầm Lập An" class="destination-image">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Slide 6: Đà Lạt -->
+        <section class="slide" id="da-lat">
+            <h2>ĐÀ LẠT</h2>
+            <div class="filter-options">
+                <label><input type="checkbox" name="type" value="Relaxation"> Du lịch nghỉ dưỡng</label>
+                <label><input type="checkbox" name="type" value="Adventure"> Du lịch mạo hiểm</label>
+                <label><input type="checkbox" name="type" value="Ecotourism"> Du lịch sinh thái</label>
+                <label><input type="checkbox" name="type" value="Culinary"> Du lịch ẩm thực</label>
+                <label><input type="checkbox" name="type" value="NatureExploration"> Du lịch khám phá tự nhiên</label>
+                <label><input type="checkbox" name="type" value="Spiritual"> Du lịch tâm linh</label>
+                <label><input type="checkbox" name="type" value="Entertainment"> Du lịch giải trí</label>
+            </div>
+            <div class="search-suggestions" id="search-suggestions-da-lat"></div>
+            <div class="filter-results" id="filter-results-da-lat"></div>
+            <div class="destination-container">
+                <div class="destination-slide" data-types="Ecotourism,Relaxation,Entertainment">
+                    <h3>Hồ Xuân Hương</h3>
+                    <a href="blog-ho-xuan-huong.html" class="destination-link">
+                        <img src="img-distination/11.ho-xuan-huong-da-lat-1.jpeg" alt="Hồ Xuân Hương" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Adventure,Ecotourism,Relaxation">
+                    <h3>Núi LangBiang</h3>
+                    <a href="blog-nui-langbiang.html" class="destination-link">
+                        <img src="img-distination/12.t7_03_hstl_20240228181843.jpg" alt="Núi LangBiang" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Ecotourism,Spiritual">
+                    <h3>Chùa Linh Phước</h3>
+                    <a href="blog-chua-linh-phuoc.html" class="destination-link">
+                        <img src="img-distination/35.tour-chua-linh-phuoc-da-lat.jpg" alt="Chùa Linh Phước" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="NatureExploration,Ecotourism,Entertainment">
+                    <h3>Đồi Chè Cầu Đất</h3>
+                    <a href="blog-doi-che-cau-dat.html" class="destination-link">
+                        <img src="img-distination/36.doi-che-cau-dat-1024x819.jpg" alt="Đồi Chè Cầu Đất" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="NatureExploration,Ecotourism,Relaxation">
+                    <h3>Thiên Đường Săn Mây Panorama</h3>
+                    <a href="blog-thien-duong-san-may-panorama.html" class="destination-link">
+                        <img src="img-distination/37.Quan-cafe-Panorama-o-Da-lat-ngon-dep-nhat.jpg" alt="Thiên Đường Săn Mây Panorama" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="NatureExploration,Ecotourism,Entertainment">
+                    <h3>Quảng Trường Lâm Viên</h3>
+                    <a href="blog-quang-truong-lam-vien.html" class="destination-link">
+                        <img src="img-distination/38.quang-truong-lam-vien-da-lat-1.png" alt="Quảng Trường Lâm Viên" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="NatureExploration,Ecotourism,Entertainment">
+                    <h3>Vườn Hồng Đà Lạt</h3>
+                    <a href="blog-vuon-hong-da-lat.html" class="destination-link">
+                        <img src="img-distination/39.vuonhong.jpg" alt="Vườn Hồng Đà Lạt" class="destination-image">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Slide 7: Phú Quốc -->
+        <section class="slide" id="phu-quoc">
+            <h2>PHÚ QUỐC</h2>
+            <div class="filter-options">
+                <label><input type="checkbox" name="type" value="Relaxation"> Du lịch nghỉ dưỡng</label>
+                <label><input type="checkbox" name="type" value="Adventure"> Du lịch mạo hiểm</label>
+                <label><input type="checkbox" name="type" value="Ecotourism"> Du lịch sinh thái</label>
+                <label><input type="checkbox" name="type" value="Culinary"> Du lịch ẩm thực</label>
+                <label><input type="checkbox" name="type" value="NatureExploration"> Du lịch khám phá tự nhiên</label>
+                <label><input type="checkbox" name="type" value="Spiritual"> Du lịch tâm linh</label>
+                <label><input type="checkbox" name="type" value="Entertainment"> Du lịch giải trí</label>
+            </div>
+            <div class="search-suggestions" id="search-suggestions-phu-quoc"></div>
+            <div class="filter-results" id="filter-results-phu-quoc"></div>
+            <div class="destination-container">
+                <div class="destination-slide" data-types="NatureExploration,Adventure,Relaxation">
+                    <h3>Hòn Móng Tay</h3>
+                    <a href="blog-hon-mong-tay.html" class="destination-link">
+                        <img src="img-distination/13.hòn-mtay.jpg" alt="Hòn Móng Tay" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Entertainment,Relaxation,Ecotourism">
+                    <h3>VinWonders Phú Quốc</h3>
+                    <a href="blog-vinwonders.html" class="destination-link">
+                        <img src="img-distination/14.phuquoc.jpg" alt="VinWonders Phú Quốc" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Culinary,Ecotourism,Entertainment">
+                    <h3>Làng Chài Rạch Vẹm</h3>
+                    <a href="blog-lang-chai-rach-vem.html" class="destination-link">
+                        <img src="img-distination/40.langchairachvem.jpg" alt="Làng Chài Rạch Vẹm" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="NatureExploration,Relaxation,Ecotourism">
+                    <h3>Bãi Dài</h3>
+                    <a href="blog-bai-dai.html" class="destination-link">
+                        <img src="img-distination/41.baidai.jpg" alt="Bãi Dài" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="NatureExploration,Ecotourism,Entertainment">
+                    <h3>Vườn Tiêu Phú Quốc</h3>
+                    <a href="blog-vuon-tieu-phu-quoc.html" class="destination-link">
+                        <img src="img-distination/41.vuon-tieu-suoi-da_1565160180.jpg" alt="Vườn Tiêu Phú Quốc" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="NatureExploration,Ecotourism,Entertainment">
+                    <h3>Trại Ong Phú Quốc</h3>
+                    <a href="blog-trai-ong-phu-quoc.html" class="destination-link">
+                        <img src="img-distination/43.traiong.png" alt="Trại Ong Phú Quốc" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="NatureExploration,Ecotourism,Relaxation">
+                    <h3>Bãi Ông Lang</h3>
+                    <a href="blog-bai-ong-lang.html" class="destination-link">
+                        <img src="img-distination/44.bai-ong-lang-phu-quoc-1.jpg" alt="Bãi Ông Lang" class="destination-image">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Slide 8: Hồ Chí Minh -->
+        <section class="slide" id="ho-chi-minh">
+            <h2>HỒ CHÍ MINH</h2>
+            <div class="filter-options">
+                <label><input type="checkbox" name="type" value="Relaxation"> Du lịch nghỉ dưỡng</label>
+                <label><input type="checkbox" name="type" value="Adventure"> Du lịch mạo hiểm</label>
+                <label><input type="checkbox" name="type" value="Ecotourism"> Du lịch sinh thái</label>
+                <label><input type="checkbox" name="type" value="Culinary"> Du lịch ẩm thực</label>
+                <label><input type="checkbox" name="type" value="NatureExploration"> Du lịch khám phá tự nhiên</label>
+                <label><input type="checkbox" name="type" value="Spiritual"> Du lịch tâm linh</label>
+                <label><input type="checkbox" name="type" value="Entertainment"> Du lịch giải trí</label>
+            </div>
+            <div class="search-suggestions" id="search-suggestions-ho-chi-minh"></div>
+            <div class="filter-results" id="filter-results-ho-chi-minh"></div>
+            <div class="destination-container">
+                <div class="destination-slide" data-types="Culinary,Relaxation,Entertainment">
+                    <h3>Chợ Bến Thành</h3>
+                    <a href="blog-cho-ben-thanh.html" class="destination-link">
+                        <img src="img-distination/15.cho_ben_thanh_sai_gon-1.jpg" alt="Chợ Bến Thành" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Spiritual,Entertainment,Ecotourism">
+                    <h3>Dinh Độc Lập</h3>
+                    <a href="blog-dinh-doc-lap.html" class="destination-link">
+                        <img src="img-distination/16.Dinh-Doc-Lap-min.jpg" alt="Dinh Độc Lập" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Ecotourism,Spiritual,Culinary">
+                    <h3>Nhà Thờ Đức Bà</h3>
+                    <a href="blog-nha-tho-duc-ba.html" class="destination-link">
+                        <img src="img-distination/45.nhathoducba.jpg" alt="Nhà Thờ Đức Bà" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="Spiritual,Ecotourism,Entertainment">
+                    <h3>Bảo Tàng Lịch Sử Việt Nam</h3>
+                    <a href="blog-bao-tang-lich-su-viet-nam.html" class="destination-link">
+                        <img src="img-distination/46.baotang-1-16686710552911683344709.jpg" alt="Bảo Tàng Lịch Sử Việt Nam" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="NatureExploration,Ecotourism,Entertainment">
+                    <h3>Địa Đạo Củ Chi</h3>
+                    <a href="blog-dia-dao-cu-chi.html" class="destination-link">
+                        <img src="img-distination/47.dia-dao-1.png" alt="Địa Đạo Củ Chi" class="destination-image">
+                    </a>
+                </div>
+                <div class="destination-slide" data-types="NatureExploration,Ecotourism,Entertainment">
+                    <h3>Thảo Cầm Viên</h3>
+                    <a href="blog-thao-cam-vien.html" class="destination-link">
+                        <img src="img-distination/48.thaocamvien.png" alt="Thảo Cầm Viên" class="destination-image">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </article>
+    <div class="controls">
+        <button onclick="mainDeck.prev()">Previous Destination</button>
+        <button onclick="mainDeck.next()">Next Destination</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="javascript/destination.js"></script>
+</body>
+<section class="instagram-gallery">
+    <h2 class="section">INSTAGRAM</h2>
+    <div class="gallery">
+        <img src="image/ban-dao-son-tra.png" alt="Instagram Image 1">
+        <img src="image/sapa.png" alt="Instagram Image 2">
+        <img src="image/phongnha.png" alt="Instagram Image 3">
+        <img src="image/kinhthanhhue.png" alt="Instagram Image 4">
+        <img src="image/hoi-an.png" alt="Instagram Image 5">
+        <img src="image/trang-an.png" alt="Instagram Image 6">
+    </div>
+</section>
+
+
+<section class="newsletter">
+    <h2>Newsletter</h2>
+    <p>Subscribe to my newsletter for the latest blog posts, tips, & travel guides. Let's stay updated!</p>
+    <form onsubmit="handleSubscribe(event)">
+        <input type="email" placeholder="Email..." required>
+        <button type="submit">SUBSCRIBE</button>
+    </form>
+</section>
+
+<!-- Modal for Thank You Message -->
+<div id="thankYouModal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1050; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center;">
+    <p>Thanks for subscribing!</p>
+    <button  onclick="closeModal()">Close</button>
+</div>
+
+<script>
+    function handleSubscribe(event) {
+        event.preventDefault();
+        const modal = document.getElementById('thankYouModal');
+        modal.style.display = 'block';
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('thankYouModal');
+        modal.style.display = 'none';
+    }
+</script>
+
+<footer>
+    <div class="footer-links">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fas fa-rss"></i></a>
+        </div>
+        <p>© My Journey</p>
+        <p>
+            <a href="#">Affiliate Disclosures</a> • 
+            <a href="#">Privacy Policy</a> • 
+            <a href="#">Terms Of Use</a>
+        </p>
+    </div>
+    <p class="disclaimer">
+        Some of the pages on my travel blog contain affiliate links. Whenever you buy something through one of these links, I get a small commission at <i>no extra cost to you.</i> As an affiliate, I only recommend products and services that I feel are high quality and helpful to my readers. Thanks for your support.
+    </p>
+</footer>
+
+</html>
