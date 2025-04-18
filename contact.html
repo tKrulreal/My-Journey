@@ -9,22 +9,25 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="css/contact.css">
+    <script src="javascript/main.js"></script>
+
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="position: sticky; top: 0; z-index: 1030; transition: all 0.3s ease;">
         <div class="container">
-            <a class="navbar-brand fw-bold " href="index.html" style="font-size: 1.5rem; color: #f8f9fa;">
-                <img class="icon" src="image/icon.png" alt="Travel Blog">
-                My Journey</a>
+            <a class="navbar-brand fw-bold" href="index.html" style="font-size: 1.8rem; color: #f8f9fa; font-family: 'Georgia', serif; letter-spacing: 1px;">
+                <img class="icon" src="image/icon2.png" alt="Travel Blog" style="margin-right: 8px; transition: all 0.3s ease;">
+                My Journey
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html"><p class="page">HOME</p></a></li>
+                    <li class="nav-item"><a class="nav-link " href="index.html"><p class="page">HOME</p></a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html"><p class="page">BLOG</p></a></li>
                     <li class="nav-item"><a class="nav-link" href="destinations.html"><p class="page">DESTINATIONS</p></a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery"><p class="page">GALLERY</p></a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html"><p class="page">GALLERY</p></a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html"><p class="page">ABOUT</p></a></li>
                     <li class="nav-item"><a class="nav-link active" href="contact.html"><p class="page">CONTACT</p></a></li>
                 </ul>
@@ -36,7 +39,7 @@
                 <h1>CONTACT</h1>
             <p>Send me your questions, comments, or suggestions!</p>
             </div>
-            <img src="image/giay1.png" style="position: absolute;bottom: -30px; z-index: 2; width: 100%; height: auto; ">
+            <img src="image/giay1.png" style="position: absolute; bottom: -30px; left: 0; z-index: 2; width: 100%; height: auto;">
         </div>
     <div class="overlay"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -49,7 +52,7 @@
         <p>Sometimes I'm busy traveling, but I try to respond to any messages!</p>
     </div>
     <div class="form">
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form" id="contactForm" >
             <div class="form-group">
                 <label for="name">Your name</label>
                 <input type="text" id="name" required>
@@ -69,29 +72,73 @@
             <button type="submit" class="submit-btn">Send</button>
         </form>
         </div>
-        <script> 
+        <script>
             document.getElementById("contactForm").addEventListener("submit", function(event) {
                 event.preventDefault();
-                alert("Your message has been sent successfully!");
+                showCustomAlert();
             });
+        
+            function showCustomAlert() {
+                document.getElementById("customAlert").style.display = "block";
+            }
+        
+            function closeCustomAlert() {
+                document.getElementById("customAlert").style.display = "none";
+            }
         </script>
+        <div id="customAlert" style="display:none; position:fixed; top:30%; left:50%; transform:translate(-50%, -50%);
+        background:white; padding:20px 30px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.3); z-index:9999; text-align:center;">
+            <h4 style="margin-bottom: 10px; color:#333;">The World Travel Guy</h4>
+            <p style="margin-bottom: 20px;">Your message has been sent successfully!</p>
+            <button onclick="closeCustomAlert()" style="background:#ff7f66; color:white; border:none; padding:8px 16px; border-radius:5px;">OK</button>
+        </div>
         <div class="faq-section">
             <div class="faq-header">FREQUENTLY ASKED QUESTIONS</div>
             <div class="faq-items">
                 <div class="faq-item">
                     <div class="faq-icon">✈</div>
-                    <div class="faq-title">Do you accept guest blogs?</div>
-                    <div class="faq-text">No, I do not accept guest blog posts on my site. I do all of the writing myself.</div>
+                    <div class="faq-title">Can I use the images from your website?</div>
+                    <div class="faq-text">All images are either taken by me or have proper licensing. If you'd like to use them, please contact me for permission or include proper credit with a link.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-icon">✈</div>
-                    <div class="faq-title">Can I quote you as an expert source?</div>
-                    <div class="faq-text">Sure, I'm happy to provide a quote as an expert source on topics like travel and culture.</div>
+                    <div class="faq-title">Do you accept collaboration for articles or sponsored content?</div>
+                    <div class="faq-text">Yes! I'm open to content partnerships. Please send your proposal through the contact form for review.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-icon">✈</div>
-                    <div class="faq-title">Can I buy drone footage from you?</div>
-                    <div class="faq-text">Sure, just send me a note letting me know what footage you’re interested in!</div>
+                    <div class="faq-title">Do you write posts based on reader requests?</div>
+                    <div class="faq-text">Yes! If multiple readers request the same topic or destination, I’ll prioritize it in future content. </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-icon">✈</div>
+                    <div class="faq-title">Do you have social media accounts I can follow?</div>
+                    <div class="faq-text">Yes! You can find me on Facebook, Instagram, and YouTube for updates, photos, and new travel stories.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-icon">✈</div>
+                    <div class="faq-title">What’s the best way to contact you?</div>
+                    <div class="faq-text">You can use the contact form on the website or email me directly. I try to respond as quickly as possible.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-icon">✈</div>
+                    <div class="faq-title"> How often is the website content updated?</div>
+                    <div class="faq-text">I update the content regularly, especially if there are major changes to entry fees, operating hours, or travel conditions.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-icon">✈</div>
+                    <div class="faq-title">Do you host any giveaways or events?</div>
+                    <div class="faq-text">Occasionally I host giveaways on social media. Follow me to stay updated on upcoming events.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-icon">✈</div>
+                    <div class="faq-title">Can you recommend other useful travel websites or blogs?</div>
+                    <div class="faq-text">Yes! I have a list of trusted travel resources. Just contact me if you’d like suggestions.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-icon">✈</div>
+                    <div class="faq-title"> Is all the information on your website 100% accurate?</div>
+                    <div class="faq-text"> I try my best to keep everything updated, but some details like ticket prices or opening hours may change. Feel free to point out any inaccuracies. </div>
                 </div>
             </div>
          </div>
