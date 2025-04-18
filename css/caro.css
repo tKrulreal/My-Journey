@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+.carocontainer input[type=radio] {
+  display: none;
+}
+
+.carocontainer {
+  width: 90vw;
+  max-width: 800px;
+  height: 60vh;
+  max-height: 600px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform-style: preserve-3d;
+}
+
+.cards1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card1 {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.card1 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Center image */
+#caroitem-1:checked ~ .cards1 #song-1,
+#caroitem-2:checked ~ .cards1 #song-2,
+#caroitem-3:checked ~ .cards1 #song-3 {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Right image */
+#caroitem-1:checked ~ .cards1 #song-2,
+#caroitem-2:checked ~ .cards1 #song-3,
+#caroitem-3:checked ~ .cards1 #song-1 {
+  transform: translateX(40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/* Left image */
+#caroitem-1:checked ~ .cards1 #song-3,
+#caroitem-2:checked ~ .cards1 #song-1,
+#caroitem-3:checked ~ .cards1 #song-2 {
+  transform: translateX(-40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#caroitem-1:checked ~ .cards1 #song-1 img,
+#caroitem-2:checked ~ .cards1 #song-2 img,
+#caroitem-3:checked ~ .cards1 #song-3 img {
+  box-shadow: 0px 0px 5px rgba(81, 81, 81, 0.47);
+}

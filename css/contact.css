@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#contactform {
+    text-align: center;
+    align-items: center;
+}
+.lienhe {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    background: url(https://blueskytravelvietnam.com/public/uploads/files/Big-banner-inbound.jpg);
+    display: flex;
+    justify-content:center;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+.content {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    z-index: 2;
+    padding: 115px;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+h2{
+    text-transform: uppercase;
+    margin:25px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+h3{
+    font-style: italic;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+h3::before, h3::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ccc);
+}
+h3::before{
+    left: -115px;
+}
+h3::after{
+    right: -115px;
+    background: linear-gradient(to left, transparent, #ccc);
+}
+#contact-form p {
+    max-width: 600px;
+    margin: 10px auto;
+    font-size: 120%;
+}
+.highlight {
+    color: #ff7f66;
+    text-decoration: none;
+    font-weight: bold;
+}
+a.highlight:hover{
+    text-decoration: underline;
+}
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    margin:50px auto;
+}
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    width: 700px;
+    margin: auto;
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #888;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+textarea {
+    resize: none;
+    height: 100px;
+}
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background: #ff7f66;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.submit-btn:hover {
+    background: #ff5a3d;
+}
+.faq-section {
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+.faq-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f4805c;
+    margin-bottom: 30px;
+}
+.faq-items {
+display: flex;
+justify-content: space-between; /* Phân bổ các mục đều trong không gian */
+gap: 40px;
+flex-wrap: wrap;
+}
+
+.faq-item {
+flex: 1 1 30%;
+width: 300%; /* Đảm bảo mỗi mục có chiều rộng đồng đều */
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+margin: auto; /* Căn giữa nội dung trong mỗi mục */
+}
+
+.faq-icon {
+background-color: #f4805c;
+color: white;
+width: 60px;
+height: 60px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+margin-bottom: 15px; /* Khoảng cách giữa biểu tượng và nội dung */
+font-size: 24px;
+}
+.faq-title {
+   font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.faq-text {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.5;
+    min-height: 100px;
+}

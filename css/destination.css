@@ -1,0 +1,432 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    background: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+header, .deck, .slide, .destination-container, .search-suggestions, .filter-results {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 1.5rem;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+}
+
+header nav {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #ff6200;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.5rem;
+}
+
+header nav a:hover {
+    color: #e55a00;
+}
+
+.blog {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.blog img {
+    position: absolute;
+    bottom: -1.5rem;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.blog-footer-img {
+    position: absolute;
+    bottom: -1.5rem;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.search-bar {
+    margin-top: 0.8rem;
+    position: relative;
+    width: 100%;
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.search-results {
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 12rem;
+    overflow-y: auto;
+    width: 100%;
+    display: none;
+    z-index: 10;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.search-results div {
+    padding: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+    margin-bottom: 0.3rem;
+}
+
+.search-results div:hover {
+    background: #f0f0f0;
+}
+
+.deck {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 10rem);
+    padding-bottom: 5rem;
+    overflow-x: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.slide.active {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide.prev {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.slide.next {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.slide h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    padding: 0 1rem;
+}
+
+.filter-options label {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.search-suggestions,
+.filter-results {
+    display: none;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    padding: 0.5rem;
+    overflow-x: hidden;
+}
+
+.search-suggestions .destination-slide,
+.filter-results .destination-slide {
+    flex: 1;
+    max-width: 18rem;
+    min-width: 12rem;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+}
+
+.search-suggestions p,
+.filter-results p {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    width: 100%;
+}
+
+.destination-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    overflow-x: hidden;
+}
+
+.destination-container.hidden {
+    display: none;
+}
+
+.destination-slide {
+    flex: 1;
+    max-width: 18rem;
+    min-width: 12rem;
+    text-align: center;
+}
+
+.destination-slide h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.destination-link {
+    display: block;
+    text-decoration: none;
+}
+
+.destination-image {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 100;
+}
+
+.controls button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background: #ff6200;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.controls button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.container {
+    overflow-x: hidden;
+}
+
+.navbar .container,
+.blog .container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav a {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.4rem;
+    }
+
+    .search-bar {
+        max-width: 90%;
+    }
+
+    .slide h2 {
+        font-size: 1.5rem;
+    }
+
+    .filter-options label {
+        font-size: 0.7rem;
+    }
+
+    .destination-slide {
+        max-width: 14rem;
+        min-width: 10rem;
+        width: 100%;
+    }
+
+    .destination-image {
+        height: 10rem;
+    }
+
+    .controls {
+        bottom: 0.5rem;
+        right: 0.5rem;
+        flex-direction: column;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .controls button {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .deck {
+        padding-bottom: 7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    header nav {
+        gap: 0.3rem;
+    }
+
+    header nav a {
+        font-size: 0.7rem;
+    }
+
+    .search-bar {
+        max-width: 95%;
+    }
+
+    .search-results {
+        max-height: 10rem;
+    }
+
+    .slide h2 {
+        font-size: 1.2rem;
+    }
+
+    .filter-options {
+        gap: 0.5rem;
+    }
+
+    .filter-options label {
+        font-size: 0.65rem;
+    }
+
+    .destination-slide {
+        max-width: 100%;
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .destination-image {
+        height: 8rem;
+    }
+
+    .controls {
+        bottom: 0.3rem;
+        right: 0.3rem;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .controls button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
+    }
+}
+.des {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    background: url(https://blueskytravelvietnam.com/public/uploads/files/Big-banner-inbound.jpg);
+    display: flex;
+    justify-content:center;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+.content {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    z-index: 2;
+    padding: 115px;
+    background: rgba(0, 0, 0, 0.5);
+
+}
