@@ -4,33 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="favicon/favicon (1).ico">
-    <title>The World Travel Guy</title>
+    <title>My Journey</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="css/home.css">
+    <script src="javascript/main.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="position: sticky; top: 0; z-index: 1030; transition: all 0.3s ease;">
         <div class="container">
-            <a class="navbar-brand fw-bold " href="index.html" style="font-size: 1.5rem; color: #f8f9fa;">
-                <img class="icon" src="image/icon.png" alt="Travel Blog">
-                My Journey</a>
+            <a class="navbar-brand fw-bold" href="index.html" style="font-size: 1.8rem; color: #f8f9fa; font-family: 'Georgia', serif; letter-spacing: 1px;">
+                <img class="icon" src="image/icon2.png" alt="Travel Blog" style="margin-right: 8px; transition: all 0.3s ease;">
+                My Journey
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link active" href="index.html"><p class="page">HOME</p></a></li>
                     <li class="nav-item"><a class="nav-link" href="blog.html"><p class="page">BLOG</p></a></li>
                     <li class="nav-item"><a class="nav-link" href="destinations.html"><p class="page">DESTINATIONS</p></a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery"><p class="page">GALLERY</p></a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html"><p class="page">GALLERY</p></a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html"><p class="page">ABOUT</p></a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html"><p class="page">CONTACT</p></a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
 
     <div class="hero">
         <video autoplay muted loop>
@@ -40,12 +43,13 @@
         <div class="hero-content">
             <h1>EXPLORE VIET NAM WITH US</h1>
             <p>Your adventure starts here. Discover amazing places, cultures, and experiences.</p>
-            <button class="button">Start Exploring</button>
+            <button class="button" onclick="window.location.href='destinations.html';">Start Exploring</button>
         </div>
-        <img src="image/giay1.png" style="position: absolute; bottom: -60px; z-index: 2; width: 100%; height: auto; ">
+        <img src="image/giay1.png" style="position: absolute; bottom: -30px; left: 0; z-index: 2; width: 100%; height: auto;">
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <!-- mn copy phần trên thôi -->
+ 
     <div class="featured">
         <h2 class="section">Featured</h2>
         <div class="d-flex flex-wrap justify-content-center">
@@ -170,11 +174,30 @@
 <section class="newsletter">
     <h2>Newsletter</h2>
     <p>Subscribe to my newsletter for the latest blog posts, tips, & travel guides. Let's stay updated!</p>
-    <form>
+    <form onsubmit="handleSubscribe(event)">
         <input type="email" placeholder="Email..." required>
         <button type="submit">SUBSCRIBE</button>
     </form>
 </section>
+
+<!-- Modal for Thank You Message -->
+<div id="thankYouModal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1050; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); text-align: center;">
+    <p>Thanks for subscribing!</p>
+    <button  onclick="closeModal()">Close</button>
+</div>
+
+<script>
+    function handleSubscribe(event) {
+        event.preventDefault();
+        const modal = document.getElementById('thankYouModal');
+        modal.style.display = 'block';
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('thankYouModal');
+        modal.style.display = 'none';
+    }
+</script>
 
 <footer>
     <div class="footer-links">
