@@ -29,11 +29,11 @@ h1 {
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .link {
-    color: rgba(203, 123, 2, 0.764)
+    color: rgba(203, 123, 2, 0.764);
 }
 
 .para {
@@ -53,7 +53,7 @@ body {
 .title {
     color: #3c3c3c;
     margin-left: 40px;
-    text-align: left
+    text-align: left;
 }
 
 .email {
@@ -62,7 +62,7 @@ body {
 
 .buttone {
     background-color: #343434;
-    color: #fff
+    color: #fff;
 }
 
 .grid-container {
@@ -71,7 +71,6 @@ body {
     gap: 16px;
     padding-bottom: 50px;
     align-items: center;
-    /* Align items to center */
     margin: 0 50px;
 }
 
@@ -79,32 +78,27 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Center content vertically */
     text-align: center;
     flex-wrap: wrap;
 }
 
 .grid-item.center img {
-    max-width: 450px;
-    /* Set a fixed width for the image */
+    max-width: 100%;
     height: auto;
     border-radius: 6px;
     display: block;
     margin-bottom: 10px;
-    /* Add spacing between image and text */
+    object-fit: cover;
 }
 
 .grid-item.center p {
     margin: 0;
     font-size: 16px;
-    /* Adjust font size for better balance */
     color: #545454e6;
     text-align: center;
 }
 
-/* Optional: Reduce margin for smaller screens */
 @media (max-width: 768px) {
-
     .grid-container,
     .grid-container2 {
         margin: 0 20px;
@@ -115,14 +109,12 @@ body {
     color: #ff7f66;
     text-align: left;
     font-style: italic;
-
     padding-bottom: 40px;
 }
 
 @media (max-width: 768px) {
     .title1 {
         text-align: center;
-        /* Center text on smaller screens */
     }
 }
 
@@ -137,10 +129,8 @@ body {
 @media (max-width: 768px) {
     .title2 {
         text-align: center;
-        /* Center text on smaller screens */
     }
 }
-
 
 .grid-container2 {
     display: grid;
@@ -148,5 +138,6 @@ body {
     gap: 16px;
     padding-bottom: 50px;
     align-items: start;
-    margin: 0 50px;
+    margin: 0 20px;
 }
+
